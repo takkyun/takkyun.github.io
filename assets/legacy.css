@@ -1,0 +1,958 @@
+/* [reset elements] */
+h1, h2, h3, h4, h5, h6 { /* heading */
+  position: static;
+  margin: 0px;
+  padding: 0px;
+}
+div, p, hr, blockquote, address, noscript { /* block */
+  position: static;
+  margin: 0px;
+  padding: 0px;
+  font-style: normal;
+  font-weight: normal;
+}
+ul, ol, dl, dt, dd { /* list */
+  position: static;
+  margin: 0px;
+  padding: 0px;
+}
+pre, table, form { /* other block */
+  position: static;
+  margin: 0px;
+  padding: 0px;
+}
+span, img  { /* inline */
+  position: static;
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  font-style: normal;
+  font-weight: normal;
+  border: 0px none #fafaff;
+}
+em, strong, q, dfn, code, samp, kbd, var, cite, abbr, acronym { /* logical style */
+  position: static;
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  font-style: normal;
+  font-weight: normal;
+}
+/* [basic] */
+body {
+  margin: 0px;
+  padding: 0px;
+  color: #334;
+  background-repeat: repeat-y;
+  background-position: 0% 0%;
+  background-image: url(./images/left.png);
+  background-color: #fff;
+}
+a {
+  text-decoration: underline;
+}
+a:link {
+  color: #66a;
+}
+a:active {
+  color: #55c;
+}
+a:visited {
+  color: #655;
+}
+a:hover {
+  color: #e50;
+}
+.hide {
+  display: none;
+}
+/* [heading] */
+h1 {
+  margin: 0px 0px 0px 0px;
+  padding: 8px 15px 38px 0px;
+  color: #9c9;
+  text-align: right;
+  font-size: 110%;
+  font-family: "Comic Sans MS",fantasy;
+  background-color: transparent;
+  background-repeat: repeat-x;
+  background-position: 225px 0%;
+  background-image: url(./images/top.png); 
+}
+h2 {
+  clear: both;
+  margin: 0px 0px -8px 5px;
+  padding: 10px 0px 0px 0px;
+  color: #339;
+  font-size: 110%;
+  font-family: "Hiragino Kaku Gothic Pro",sans-serif;
+  text-align: left;
+  line-height: 1.1em;
+  background-color: transparent;
+  background-position: 100% 0%;
+  background-repeat: no-repeat;
+}
+h2 a {
+  display: block;
+  margin: 0px 40px 0px 0px;
+  padding: 7px 0px 4px 18px;
+  text-decoration: none;
+  background-color: transparent;
+  background-position: 0% 0%;
+  background-repeat: no-repeat;
+  background-image: url(./images/heading.png);
+}
+h2 a:link {
+  color: #339;
+  text-decoration: none;
+}
+h2 a:visited {
+  color: #339;
+  text-decoration: none;
+}
+h2 a:active {
+  color: #339;
+  text-decoration: none;
+}
+h2 a:hover {
+  display: block;
+  color: #c33;
+  text-decoration: none;
+}
+h3 {
+  clear: both;
+  margin: 20px 0px -5px 10px;
+  padding: 0px 0px 5px 10px;
+  text-align: left;
+  color: #669;
+  font-size: 100%;
+  line-height: 1em;
+  font-family: "Hiragino kaku Gothic Pro",sans-serif;
+  border: 0px none #669;
+  background-color: transparent;
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-image: url(./images/line.png);
+}
+h3.faq {
+  margin: 20px 0px 5px 0px;
+  padding: 0px 0px 5px 15px;
+}
+h3 a {
+  display: block;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  text-decoration: none;
+}
+h3 a:link {
+  text-decoration: none;
+  color: #669;
+}
+h3 a:visited {
+  text-decoration: none;
+  color: #669;
+}
+h3 a:active {
+  text-decoration: none;
+  color: #669;
+}
+h3 a:hover {
+  color: #f00;
+  text-decoration: none;
+}
+h4, h5, h6 {
+  clear: both;
+  margin: 20px 0px 5px 0px;
+  padding: 2px 0px 2px 5px;
+  text-align: left;
+  font-size: 100%;
+  font-family: "Hiragino Kaku Gothic Pro",sans-serif;
+  color: #669;
+  border: 0px none #669;
+  border-left: 20px solid #ddf;
+  border-bottom: 1px solid #ddf;
+}
+h4 a {
+  text-decoration: none;
+}
+h5 a {
+  text-decoration: none;
+}
+h6 a {
+  text-decoration: none;
+}
+/* [navigator] */
+div.navigator {
+  position: absolute;
+  width: 252px;
+  height: 120px;
+  top: 0px;
+  left: 0px;
+  margin: 0px;
+  padding: 0px 0px 0px 0px;
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  background-image: url(./images/title.png);
+  background-color: transparent;
+}
+div.navigator ul.menu {
+  /* for Mozilla, Safari, Opera, etc \*/
+  position: fixed!important;
+  /* for Internet Explorer */
+  position: absolute;
+  top: 60px;
+  width: 120px;
+  margin: 0px 0px 0px 0px;
+  padding: 0px;
+  font-family: "Hiragino Kaku Gothic Pro",sans-serif;
+  font-size: 12px;
+  line-height: 1.1em;
+  font-weight: bold;
+  list-style: none;
+}
+div.navigator ul.menu li {
+  display: inline;
+  padding: 0px;
+  margin: 0px;
+  text-decoration: none;
+  background-color: transparent;
+}
+div.navigator ul.menu li a {
+  display: block;
+  margin: 1px 0px 0px 0px;
+  padding: 5px 10px 6px 10px;
+  color: #99c;
+  text-decoration: none;
+  border: 1px none #fff;
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+  background-image: url(./images/link/link.png);
+}
+div.navigator ul.menu li.current a {
+  padding: 5px 10px 3px 10px;
+  color: #59e;
+  background-image: url(./images/link/current_top.png);
+}
+body.top div.navigator ul.menu li.current a {
+  padding: 5px 10px 6px 10px;
+  color: #59e;
+  background-image: url(./images/link/current.png);
+}
+div.navigator ul.menu li a:hover {
+  color: #3a7;
+  background-image: url(./images/link/hover.png);
+}
+div.navigator ul.menu li.current a:hover {
+  color: #3a7;
+  background-image: url(./images/link/current_top.png);
+}
+body.top div.navigator ul.menu li.current a:hover {
+  color: #3a7;
+  background-image: url(./images/link/hover.png);
+}
+div.navigator ul.menu li.current ul.tree {
+  margin: -1px 0px 0px 0px;
+  padding: 0px 0px 1px 0px;
+  font-family: "Hiragino Kaku Gothic Pro",sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+  background-image: url(./images/link/current_bottom.png);
+}
+div.navigator ul.menu li.current ul.tree li {
+  display: block;
+  margin: 0px 0px 0px -2px;
+  padding: 0px 0px 3px 26px;
+  border: 0px solid #cf6;
+  background-repeat: no-repeat;
+  background-position: 10px 0%;
+}
+div.navigator ul.menu li.current ul.tree li.bgn {
+  background-image: url(./images/tree/lst.png);
+}
+div.navigator ul.menu li.current ul.tree li.lst {
+  background-image: url(./images/tree/lst.png);
+}
+div.navigator ul.menu li.current ul.tree li.end {
+  margin-bottom: 5px;
+  background-image: url(./images/tree/end.png);
+}
+div.navigator ul.menu li.current ul.tree li a {
+  display: inline;
+  margin: 0px;
+  padding: 1px;
+  line-height: 1.0em;
+  color: #99c;
+  background: none;
+}
+div.navigator ul.menu li.current ul.tree li a:link {
+  color: #99c;
+  background: none;
+}
+div.navigator ul.menu li.current ul.tree li a:active {
+  color: #99c;
+  background: none;
+}
+div.navigator ul.menu li.current ul.tree li a:visited {
+  color: #99c;
+  background: none;
+}
+div.navigator ul.menu li.current ul.tree li a.current {
+  color: #59e!important;
+  background: none;
+}
+div.navigator ul.menu li.current ul.tree li span {
+  color: #999;
+  background: none;
+}
+div.navigator ul.menu li.current ul.tree li a:hover {
+  color: #3a7;
+  background: none;
+}
+/* [etcetera] */
+div.etcetera {
+  margin: 15px 15px 0px 0px;
+  padding: 0px 0px 10px 0px;
+  text-align: right;
+}
+div.etcetera p.link2top {
+  margin: 0px 0px 5px 0px;
+  padding: 0px;
+  line-height: 1.0em;
+  text-align: right;
+}
+div.etcetera p.link2top a {
+  text-decoration: none;
+}
+div.etcetera p.link2top a:hover {
+  text-decoration: underline;
+}
+div.etcetera div.counter {
+  display: inline;
+}
+div.etcetera address {
+  margin: 0px 0px 5px 0px;
+  padding: 0px;
+  text-align: right;
+  color: #aaa;
+  font-size: 90%;
+  font-family: "Verdana", sans-serif;
+}
+div.etcetera ul.banner {
+  margin: 0px 0px 5px 0px;
+  padding: 0px;
+  list-style: none;
+}
+div.etcetera ul.banner li {
+  display: inline;
+}
+div.etcetera ul.banner li img {
+  border: 1px solid #ddf;
+}
+/* [deeplink] */
+p.deeplink {
+  clear: right;
+  float: right;
+  width: 10em;
+  margin: 2px 0px 2px 5px;
+  padding: 0px;
+  line-height: 1.0em;
+  font-size: 90%;
+  border-top:    1px solid #99c;
+  border-right:  1px solid #ccf;
+  border-bottom: 1px solid #ccf;
+  border-left:   1px solid #99c;
+  background-color: #ddf;
+}
+p.deeplink a {
+  display: block;
+  margin: 1px;
+  padding: 2px 0px 0px 0px;
+  text-align: center;
+  text-decoration: none;
+  font-family: sans-serif;
+  color: #77c;
+  border-top:    1px solid #ccf;
+  border-right:  1px solid #99c;
+  border-bottom: 1px solid #99c;
+  border-left:   1px solid #ccf;
+  background-color: #f0f0ff;
+}
+p.deeplink a:hover {
+  color: #633;
+  border-top:    1px solid #99c;
+  border-right:  1px solid #ccf;
+  border-bottom: 1px solid #ccf;
+  border-left:   1px solid #99c;
+  background-color: #e8e8f8;
+}
+p.link2navi {
+  margin: 0px 10px 0px 0px;
+  padding: 0px;
+  text-align: right;
+  line-height: 1em;
+  color: #fff;
+  font-size: 12px;
+}
+p.link2navi a:link {
+  color: #fff;
+  text-decoration: none;
+}
+p.link2navi a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+p.link2navi a:active {
+  color: #fff;
+  text-decoration: none;
+}
+p.link2navi a:hover {
+  color: #e50;
+  text-decoration: underline;
+}
+/* [main parts] */
+div.main {
+  position: relative;
+  z-index: 5;
+  margin: 0px 10px 0px 135px;
+  padding: 0px;
+}
+div.main_head {
+  display: none;
+}
+div.main_foot {
+  display: none;
+}
+div.main hr.separate {
+  display: none;
+}
+div.talk {
+  margin: 0px 0px 10px 0px;
+  padding: 0px;
+}
+div.talkhead {
+  clear: both;
+  margin: 0px 15px 5px 0px;
+  padding: 0px;
+  text-align: right;
+}
+div.talkmain {
+  margin: 0px 20px 5px 20px;
+  padding: 0px;
+}
+div.talkfoot {
+  clear: both;
+  margin: -5px 15px 20px 0px;
+  padding: 0px;
+  text-align: right;
+}
+/* [talk header,footer parts] */
+div.talkhead p {
+  display: inline;
+  margin: 0px;
+  padding: 0px 0px 0px 5px;
+  font-size: 90%;
+  color: #779;
+}
+div.talkfoot p {
+  display: inline;
+  margin: 0px;
+  padding: 0px 0px 0px 5px;
+  font-size: 90%;
+}
+p.date {
+}
+p.link {
+}
+p.author {
+  margin: 0px;
+  padding: 0px;
+  font-size: 90%;
+  color: #396;
+}
+p.type {
+}
+p.comlink {
+}
+p.reflink {
+}
+form.talk-comment {
+  clear: both;
+  margin: 0px;
+  padding: 10px;
+  border-top: 1px dashed #696;
+}
+/* [paragraph] */
+p.text {
+  margin: 0px 0px 0.8em 0px;
+  padding: 0px;
+  color: #445;
+  font-size: 100%;
+  text-indent: 1em;
+  line-height: 1.5em;
+}
+p.gloss {
+  margin: 0px 0px 1.0em 0px;
+  padding: 0px 0px 0px 24px;
+  color: #987;
+  font-size: 90%;
+  line-height: 1.5em;
+  background-image: url(./images/balloon.png);
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+}
+p.separate {
+  margin: 0px 0px 0.8em 0px;
+  padding: 0px 0px 0px 0px;
+  color: #668;
+  font-size: 100%;
+  line-height: 1.5em;
+  text-align: center;
+}
+p.clear {
+  clear: both;
+  margin: 0px 0px 0.8em 0px;
+  padding: 0px 0px 0px 0px;
+  color: #668;
+  font-size: 100%;
+  line-height: 1.5em;
+  text-align: center;
+}
+p.top_text {
+  margin: 0px 0px 0.8em 0px;
+  padding: 0px;
+  color: #445;
+  font-size: 100%;
+  line-height: 1.5em;
+}
+p.bbstxt {
+  margin: 0px 0px 0.8em 0px;
+  padding: 0px;
+  color: #445;
+  font-size: 100%;
+  text-indent: 0em;
+  line-height: 1.5em;
+}
+
+/* [difinition list] */
+dl.text {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 1em;
+  line-height: 1.5em;
+  font-size: 100%;
+}
+dl.text dd {
+  margin: 0px 0px 0.8em 3em;
+  padding: 0px;
+}
+dl.plain {
+  margin: 0px 0px 0.8em 0px;
+  padding: 0px 0px 0px 1em;
+  line-height: 1.5em;
+  font-size: 100%;
+}
+dl.plain dt {
+  display: block;
+  clear: left;
+  float: left;
+  padding: 0px;
+  margin: 0px;
+  width: 9.5em;
+  text-align: right;
+  font-family: "Hiragino Kaku Gothic Pro",sans-serif;
+  font-weight: bold;
+}
+dl.plain dd {
+  margin: 0px 0px 0.5em 10em;
+  padding: 0px;
+}
+dl.plain dl {
+  margin: 0.5em 0px 0.5em 0px;
+  padding: 0px;
+  line-height: 1.3em;
+  font-size: small;
+}
+dl.plain dl dt {
+  width: 9em;
+  font-weight: normal;
+}
+dl.plain dl dd {
+  margin: 0px 0px 0px 9.5em;
+}
+dl.content {
+  margin: 0px 0px 0.8em 0px;
+  padding: 0px 0px 0px 1em;
+  line-height: 1.5em;
+  font-size: 100%;
+}
+dl.content dt {
+  display: block;
+  clear: left;
+  float: left;
+  width: 6.5em;
+  text-align: right;
+  font-family: "Hiragino Kaku Gothic Pro",sans-serif;
+  font-weight: bold;
+  color: #666;
+}
+dl.content dd {
+  margin: 0px 0px 0.2em 7em;
+  padding: 0px;
+}
+/* [list] */
+ul.text {
+  margin: 0.8em 0px 0.8em 0px;
+  padding: 0px 0px 0px 2.5em;
+  line-height: 1.5em;
+}
+ul.content {
+  margin: 0px 0px 0.8em 0px;
+  padding: 0px;
+  line-height: 1.4em;
+  list-style: none;
+  font-size: small;
+}
+ul.plain {
+  margin: 0px 0px 0.8em 0px;
+  padding: 0px;
+  line-height: 1.5em;
+  list-style: none;
+}
+ul.plain li {
+  padding: 2px 0px 2px 0px;
+}
+ul.plain li.gloss {
+  padding: 2px 0px 2px 20px;
+  color: #987;
+  font-size: 90%;
+  background-image: url(./images/balloon.png);
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+}
+ul.tree {
+  margin: 0px 6px 1.0em 0px;
+  padding: 0px;
+  list-style: none;
+  text-align: left;
+  font-size: 90%;
+}
+ul.tree li {
+  margin: 0px;
+  padding: 0px 0px 0px 20px;
+}
+ul.tree ul {
+  margin: 0px 6px 0px 10px;
+  padding: 0px 0px 3px 0px;
+  list-style: none;
+}
+ul.child li {
+  margin: 0px;
+  padding: 0px 0px 0px 15px;
+  background-image: url(./images/tree/lst.png);
+  background-repeat: no-repeat;
+}
+ul.child li.bgn {
+  margin: 0px;
+  padding: 3px 0px 0px 15px;
+  background-image: url(./images/tree/bgn.png);
+  background-repeat: no-repeat;
+}
+ul.child li.end {
+  margin: 0px;
+  padding: 0px 0px 0px 15px;
+  background-image: url(./images/tree/end.png);
+  background-repeat: no-repeat;
+}
+ol.text {
+  margin: 0px 0px 0.8em 0px;
+  padding: 0px 0px 0px 2.5em;
+  line-height: 1.5em;
+}
+div#talkupdatelist ul {
+  margin: 0.8em 0px 0.8em 0px;
+  padding: 0px 0px 0px 2.5em;
+  line-height: 1.5em;
+  font-size: 90%;
+}
+/* [quotation] */
+p.bgn_quote {
+  display: none;
+}
+p.end_quote {
+  display: none;
+}
+blockquote {
+  margin: 0px 20px 10px 20px;
+  padding: 2px 8px 2px 25px;
+  color: #336;
+  line-height: 1.4em;
+  border: 1px solid #aac;
+  background-color: #eef;
+  background-image: url(./images/finger.png);
+  background-repeat: no-repeat;
+  background-position: 5px 3px;
+}
+blockquote p {
+  padding: 0px;
+  margin: 0px;
+  font-style: italic;
+}
+q {
+  margin: 0px 0.2em 0px 0.2em;
+  padding: 0.1em;
+  color: #669;
+  font-style: italic;
+  border: 1px dashed #aac;
+  background-color: #eef;
+}
+q:before {
+  content: '';
+}
+q:after {
+  content: '';
+}
+p.source {
+  margin: -10px 20px 1.0em 20px;
+  padding: 0px;
+  text-align: right;
+  font-size: 90%;
+  color: #666;
+}
+cite {
+  font-style: normal;
+}
+/* [image] */
+div.graph {
+  margin: 0px 0px 1.0em 0px;
+  text-align: center;
+  font-size: 100%;
+}
+div.graph span {
+  font-size: 90%;
+}
+div.graph_odd {
+  clear: right;
+  float: right;
+  margin: 4px 4px 4px 4px;
+  width: 128px;
+  text-align: center;
+  font-size: 100%;
+}
+div.graph_odd span {
+  font-size: 90%;
+}
+div.graph_even {
+  clear: left;
+  float: left;
+  margin: 4px 4px 4px 4px;
+  width: 128px;
+  text-align: center;
+  font-size: 100%;
+}
+div.graph_even span {
+  font-size: 90%;
+}
+div.image_table {
+  float: left;
+  margin: 4px 4px 4px 4px;
+  width: 128px;
+  text-align: center;
+  font-size: 90%;
+}
+p img.odd {
+  margin: 5px;
+  clear: right;
+  float: right;
+}
+p img.even {
+  margin: 5px;
+  clear: left;
+  float: left;
+}
+/* [table] */
+table {
+  margin: 0px 0px 0.8em 0px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px;
+  font-size: 100%;
+  border-collapse: separate;
+  border: 1px solid #7f7fb2;
+}
+table caption {
+  margin: 2px 0px 2px 0px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+table th {
+  margin: 0px;
+  padding: 2px;
+  line-height: 1.2em;
+  font-size: 90%;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  font-family: "Hiragino Kaku Gothic Pro",sans-serif;
+  font-weight: bold;
+  color: #fff;
+  border: 1px solid #7f7fb2;
+  background-color: #a0a0cc;
+}
+table td {
+  margin: 0px;
+  padding: 2px;
+  line-height: 1.2em;
+  text-align: left;
+  border: 1px dashed #7f7fb2;
+}
+table td.num {
+  text-align: right;
+}
+table.score {
+  margin: 0px 0px 0.8em 10px;
+}
+table.listing {
+  margin: 0px 0px 0.8em 10px;
+}
+table.listing th {
+  margin: 0px;
+  padding: 2px;
+  text-align: left;
+  white-space: nowrap;
+  vertical-align: middle;
+  font-family: "Hiragino Kaku Gothic Pro",sans-serif;
+  font-weight: bold;
+  color: #445;
+  border: 1px dashed #7f7fb2;
+  background-color: transparent;
+}
+table.calendar {
+  border: 0px solid #7f7fb2;
+}
+table.calendar td.cal {
+  border: 0px solid #7f7fb2;
+  text-align: center;
+}
+table.calendar td.cal table {
+  width: 100%;
+  margin: 0px 0px 0.8em 0px;
+  padding: 0px;
+}
+table.calendar td.cal table td {
+  text-align: center;
+}
+table.calendar td.hit {
+  background-color: #efe;
+}
+/* [inline elements] */
+strong {
+  font-family: "Hiragino Kaku Gothic Std",sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+em {
+  font-style: normal;
+  font-weight: normal;
+}
+abbr,acronym {
+  border-bottom: 1px dashed #99c;
+  cursor: help;
+}
+.strg {
+  color: #459;
+}
+.name {
+  color: #743;
+}
+.othr {
+  color: #475;
+}
+.item {
+  color: #655;
+}
+.holi {
+  color: #d88;
+}
+.sun  {
+  color: #d88;
+}
+.sat  {
+  color: #77c;
+}
+.week {
+  color: #556;
+}
+span.key {
+  color: #666;
+}
+span.tag {
+  display: none;
+}
+span.url {
+  display: none;
+}
+span.face {
+  font-family: monospace;
+}
+strong.shout {
+  color: #339;
+  font-size: 160%;
+}
+/* [for log] */
+div.navilink {
+  clear: both;
+  text-align: right;
+  margin: 15px;
+  padding: 0px;
+  font-size: 90%;
+  color: #779;
+}
+div.navilink a {
+  text-decoration: none;
+  border-right: 5px solid #fff;
+  border-bottom: 1px dashed #779;
+}
+body.updater form {
+  margin: 0px;
+  padding: 0px;
+}
+input.menu-button {
+  width: 120px;
+  font-size: 12px;
+  font-weight: bold;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+input.menu-button-on {
+  width: 120px;
+  font-size: 12px;
+  font-weight: bold;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  color: #999;
+}
+dl.login {
+  position: absolute;
+  top: 80px;
+  left: 150px;
+}
+dl.login dt {
+  display: block;
+  clear: left;
+  float: left;
+  width: 6.5em;
+  text-align: right;
+  font-family: "Hiragino Kaku Gothic Pro",sans-serif;
+  font-weight: bold;
+  color: #666;
+}
+dl.login dd {
+  margin: 0px 0px 0.2em 7em;
+  padding: 0px;
+}

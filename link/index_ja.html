@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Link Indicator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" title="default" type="text/css" href="../assets/legacy.css" media="screen,tv" />
+  <link rel="stylesheet" title="default" type="text/css" href="../assets/indicator.css" media="screen,tv" />
+  <script type="text/javascript" charset="UTF-8" src="link_indicator.js"></script>
+</head>
+<body id="sbSimpleBoxes" class="top">
+<h1 id="top" xml:lang="en">Link Indicator</h1>
+<div class="main">
+<div class="main_head"><hr class="separate" /></div>
+<div class="talk">
+  <div class="talkhead">
+    <h2 class="talk_clmn"><a href="#index" id="index">What's this?</a></h2>
+    <p class="date">Last modified : 2021/06/23 (<span class="week">Wed</span>)</p><!--_end_date_-->
+  </div>
+  <div class="talkmain">
+<p class="text"><strong class="name">Link Indicator</strong>はアンカーに付けられたtarget属性の判別とページ内リンクを視覚的に明示する仕組みを提供する補助スクリプトです。</p>
+<ol class="text">
+  <li><a href="#feature">機能</a></li>
+  <li><a href="#howto">設置方法</a></li>
+  <li><a href="#customize">カスタマイズ</a></li>
+</ol>
+  </div><!--_end_talkmain_-->
+  <div class="talkhead">
+    <h2 class="talk_clmn"><a href="#feature" id="feature">機能</a></h2>
+    <p class="link"><a href="#index">概要へ</a></p><!--_end_link_-->
+  </div>
+  <div class="talkmain">
+    <ul class="text">
+    <li><code>target=&quot;_blank&quot;</code>など外部ウィンドウを開くリンクを明示します（このサンプルでは OFF にしています）。</li>
+    <li>ページ内リンク<a href="#note1" id="footnote1">[*1]</a>を明示します。</li>
+    </ul>
+    <p class="gloss">[<a href="#footnote1" id="note1">*1</a>] ページ内ナビ以外にもこのような注釈にそれなりに有効です。</p>
+  </div><!--_end_talkmain_-->
+  <div class="talkhead">
+    <h2 class="talk_clmn"><a href="#howto" id="howto">設置方法</a></h2>
+    <p class="link"><a href="#index">概要へ</a></p><!--_end_link_-->
+  </div>
+  <div class="talkmain">
+    <p class="text"><em class="name">Link Indicator</em>の導入は簡単です。</p>
+    <ol class="text">
+      <li>htmlヘッダに<em class="name">link_indicator.js</em>を追記します。</li>
+    </ol>
+  </div><!--_end_talkmain_-->
+  <div class="talkhead">
+    <h2 class="talk_clmn"><a href="#customize" id="customize">カスタマイズ</a></h2>
+    <p class="link"><a href="#index">概要へ</a></p><!--_end_link_-->
+  </div>
+  <div class="talkmain">
+    <p class="text">&quot;link_indicator.js&quot;の末尾に</p>
+    <pre class="explain"><code>addEvent(window,&quot;load&quot;,function() {
+&nbsp;&nbsp;var indicator = new LinkIndicator({
+&nbsp;&nbsp;&nbsp;&nbsp;linkToBlank:'addwin.png',
+&nbsp;&nbsp;&nbsp;&nbsp;pointerImg:'pointer.png',
+&nbsp;&nbsp;&nbsp;&nbsp;borderWidth:'2px'
+&nbsp;&nbsp;});
+});</code></pre>
+    <p class="text">のようにLink Indicatorの設定があります。</p>
+    <p class="text"><code>linkToBlank</code>と<code>pointerImg</code>は画像のパスを設定します。画像を変更したり、画像を設置するディレクトリを変更した場合はここで画像のurlを指定してください。</p>
+    <p class="gloss">デフォルトでは相対パスで指定され、&quot;link_indicator.js&quot;とそれを読み込むhtmlファイルと画像が全て同じディレクトリに置かれることが前提となっています。上記画像設定は絶対パスで指定した方が無難でしょう。</p>
+    <p class="text"><code>borderWidth</code>でページ内リンクを明示するためのラインの太さを指定します。これを'0'に設定すると、ラインは引かれません。</p>
+  </div><!--_end_talkmain_-->
+</div>
+<div class="main_foot"><hr class="separate" /></div>
+</div><!--_end_main_-->
+<div class="navigator">
+  <ul class="menu" id="navimenu">
+    <li class="current"><a href="index_ja.html">Link Indicator</a></li>
+  </ul>
+</div><!--_end_navigator_-->
+<div class="etcetera">
+  <p class="link2top">[<a href="index.html">English</a>][<a href="#top">top</a>]</p>
+  <address xml:lang="en">&copy; 2021 SimpleBoxes</address>
+</div><!--_end_etcetera_-->
+</body>
+</html>

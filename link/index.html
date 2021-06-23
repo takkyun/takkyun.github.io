@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Link Indicator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" title="default" type="text/css" href="../assets/legacy.css" media="screen,tv" />
+  <link rel="stylesheet" title="default" type="text/css" href="../assets/indicator.css" media="screen,tv" />
+  <script type="text/javascript" charset="UTF-8" src="link_indicator.js"></script>
+</head>
+<body id="sbSimpleBoxes" class="top">
+<h1 id="top" xml:lang="en">Link Indicator</h1>
+<div class="main">
+<div class="main_head"><hr class="separate" /></div>
+<div class="talk">
+  <div class="talkhead">
+    <h2 class="talk_clmn"><a href="#index" id="index">What's this?</a></h2>
+    <p class="date">Last modified : 2021/06/23 (<span class="week">Wed</span>)</p><!--_end_date_-->
+  </div>
+  <div class="talkmain">
+    <p class="text"><strong class="name">Link Indicator</strong> displays visually links within a page and links which have target attribute.</p>
+    <ol class="text">
+      <li><a href="#feature">Feature</a></li>
+      <li><a href="#howto">How to use</a></li>
+      <li><a href="#customize">Customize</a></li>
+    </ol>
+  </div><!--_end_talkmain_-->
+  <div class="talkhead">
+    <h2 class="talk_clmn"><a href="#feature" id="feature">Feature</a></h2>
+    <p class="link"><a href="#index">overview</a></p><!--_end_link_-->
+  </div>
+  <div class="talkmain">
+    <ul class="text">
+    <li>Displaying links which have target attribute like <code>target=&quot;_blank&quot;</code> (It's turned off in this sample).</li>
+    <li>Displaying links within a page<a href="#note1" id="footnote1">[*1]</a>.  </li>
+    </ul>
+    <p class="gloss">[<a href="#footnote1" id="note1">*1</a>] It's effective for footnotes like this. </p>
+  </div><!--_end_talkmain_-->
+  <div class="talkhead">
+    <h2 class="talk_clmn"><a href="#howto" id="howto">How to use</a></h2>
+    <p class="link"><a href="#index">overview</a></p><!--_end_link_-->
+  </div>
+  <div class="talkmain">
+    <p class="text">It is very easy to use <em class="name">Link Indicator</em> on your page.</p>
+    <ol class="text">
+      <li>Just include <em class="name">link_indicator.js</em> in the &lt;head&gt; of the content.</li>
+    </ol>
+  </div><!--_end_talkmain_-->
+  <div class="talkhead">
+    <h2 class="talk_clmn"><a href="#customize" id="customize">Customize</a></h2>
+    <p class="link"><a href="#index">overview</a></p><!--_end_link_-->
+  </div>
+  <div class="talkmain">
+    <p class="text">At the end of &quot;link_indicator.js&quot;,</p>
+    <pre class="explain"><code>addEvent(window,&quot;load&quot;,function() {
+&nbsp;&nbsp;var indicator = new LinkIndicator({
+&nbsp;&nbsp;&nbsp;&nbsp;linkToBlank:'addwin.png',
+&nbsp;&nbsp;&nbsp;&nbsp;pointerImg:'pointer.png',
+&nbsp;&nbsp;&nbsp;&nbsp;borderWidth:'2px'
+&nbsp;&nbsp;});
+});</code></pre>
+    <p class="text">there are settings for Link Indicator.  </p>
+    <p class="text"><code>linkToBlank</code> and <code>pointerImg</code> indicates paths for images.  So you can change these when the images are changed or put on the different directory.  </p>
+    <p class="gloss">The default settings are set like above on the premise that html files, &quot;link_indicator.js&quot;, and all images are put on the same directory.  So I recommend to change it as absolute path, such as <code>&quot;https://takkyun.github.io/assets/images/addwin.png&quot;</code>.</p>
+    <p class="text"><code>borderWidth</code> indicates width of border to point links within a page. If you set as <code>'0'</code>, a line is not drawn.  </p>
+  </div><!--_end_talkmain_-->
+</div>
+<div class="main_foot"><hr class="separate" /></div>
+</div><!--_end_main_-->
+<div class="navigator">
+  <ul class="menu" id="navimenu">
+    <li class="current"><a href="index.html">Link Indicator</a></li>
+  </ul>
+</div><!--_end_navigator_-->
+<div class="etcetera">
+  <p class="link2top">[<a href="index_ja.html">Japanese</a>][<a href="#top">top</a>]</p>
+  <address xml:lang="en">&copy; 2021 SimpleBoxes</address>
+</div><!--_end_etcetera_-->
+</body>
+</html>

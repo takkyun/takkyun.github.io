@@ -1,0 +1,27 @@
+p.text,
+ol.text,
+ul.text,
+dl.text {
+  font-size: 90%!important;
+  color: #666;
+}
+dl.text dt {
+  font-weight: bold;
+  color: #555;
+}
+dl#download-list {
+  font-size: 90%!important;
+  color: #666;
+}
+pre.explain {
+  margin: 1em;
+  padding: 0.5em;
+  font-size: 90%;
+  background-color: #efe;
+  border: 1px solid #cec;
+  color: #666;
+}
+#indicator-line {
+  border-color: #f93;
+  border-style: solid;
+}
