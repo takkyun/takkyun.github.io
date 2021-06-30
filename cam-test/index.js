@@ -52,7 +52,8 @@ function draw() {
   if (isReady) {
     const cv_src = new cv.matFromImageData(imageData);
     const imgray = new cv.Mat();
-    cv.cvtColor(cv_src, imgray, cv.COLOR_BGR2GRAY)
+    cv.cvtColor(cv_src, cv_src, cv.COLOR_RGB2GRAY, 0)
+    cv.Canny(cv_src, imgray, 50, 100, 3, false);
     // const thresh = new cv.Mat();
     // cv.threshold(imgray, thresh, 127, 255, 0)
     // let lines = new cv.Mat();
