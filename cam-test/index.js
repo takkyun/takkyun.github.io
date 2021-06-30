@@ -50,42 +50,41 @@ function draw() {
   imageData = ctx.getImageData(0, 0, cw, ch);
 
   if (isReady) {
-    let dst = cv.Mat.zeros(cw, ch, cv.CV_8UC3);
-  
+    const dst = cv.Mat.zeros(cw, ch, cv.CV_8UC3);
     const cv_src = new cv.matFromImageData(imageData);
-    const imgray = new cv.Mat(),thresh = new cv.Mat();
-    cv.cvtColor(cv_src, imgray, cv.COLOR_BGR2GRAY)
-    const ret = cv.threshold(imgray, thresh, 127, 255, 0)
-    let blue = new cv.Scalar(0,0,255)
-    let lines = new cv.Mat();
-    cv.HoughLinesP(thresh, lines, 1, Math.PI / 180, 2, 0, 0);
+    // const imgray = new cv.Mat(),thresh = new cv.Mat();
+    // cv.cvtColor(cv_src, imgray, cv.COLOR_BGR2GRAY)
+    // const ret = cv.threshold(imgray, thresh, 127, 255, 0)
+    // let blue = new cv.Scalar(0,0,255)
+    // let lines = new cv.Mat();
+    // cv.HoughLinesP(thresh, lines, 1, Math.PI / 180, 2, 0, 0);
   
-    // draw lines
-    for (let i = 0; i < lines.rows; ++i) {
-      let startPoint = new cv.Point(lines.data32S[i * 4], lines.data32S[i * 4 + 1]);
-      let endPoint = new cv.Point(lines.data32S[i * 4 + 2], lines.data32S[i * 4 + 3]);
-      cv.line(thresh, startPoint, endPoint, blue);
-    }
+    // // draw lines
+    // for (let i = 0; i < lines.rows; ++i) {
+    //   let startPoint = new cv.Point(lines.data32S[i * 4], lines.data32S[i * 4 + 1]);
+    //   let endPoint = new cv.Point(lines.data32S[i * 4 + 2], lines.data32S[i * 4 + 3]);
+    //   cv.line(thresh, startPoint, endPoint, blue);
+    // }
     
-    let contours = new cv.MatVector();
-    let hierarchy = new cv.Mat();   
-    var im2 = cv.findContours(thresh, contours, hierarchy, cv.RETR_CCOMP, cv.CHAIN_APPROX_SIMPLE)
-    let largest_cnt = getLargestContour(contours);
-    let rect = cv.boundingRect(largest_cnt);
-    let contoursColor = new cv.Scalar(255, 255, 255);
-    let rectangleColor = new cv.Scalar(255, 0, 230);
+    // let contours = new cv.MatVector();
+    // let hierarchy = new cv.Mat();   
+    // var im2 = cv.findContours(thresh, contours, hierarchy, cv.RETR_CCOMP, cv.CHAIN_APPROX_SIMPLE)
+    // let largest_cnt = getLargestContour(contours);
+    // let rect = cv.boundingRect(largest_cnt);
+    // let contoursColor = new cv.Scalar(255, 255, 255);
+    // let rectangleColor = new cv.Scalar(255, 0, 230);
   
-    let point1 = new cv.Point(rect.x, rect.y);
-    let point2 = new cv.Point(rect.x + rect.width, rect.y + rect.height);
-    cv.rectangle(cv_src, point1, point2, rectangleColor, 5, cv.LINE_AA, 0);
+    // let point1 = new cv.Point(rect.x, rect.y);
+    // let point2 = new cv.Point(rect.x + rect.width, rect.y + rect.height);
+    // cv.rectangle(cv_src, point1, point2, rectangleColor, 5, cv.LINE_AA, 0);
     
-    let rotatedRect = cv.minAreaRect(largest_cnt);
-    let vertices = cv.RotatedRect.points(rotatedRect);
-    let white = new cv.Scalar(255, 255, 255);
-    let red = new cv.Scalar( 255, 0,0);
-    for (let i = 0; i < 4; i++) {
-      cv.line(cv_src, vertices[i], vertices[(i + 1) % 4], red, 2, cv.LINE_AA, 0);
-    }
+    // let rotatedRect = cv.minAreaRect(largest_cnt);
+    // let vertices = cv.RotatedRect.points(rotatedRect);
+    // let white = new cv.Scalar(255, 255, 255);
+    // let red = new cv.Scalar( 255, 0,0);
+    // for (let i = 0; i < 4; i++) {
+    //   cv.line(cv_src, vertices[i], vertices[(i + 1) % 4], red, 2, cv.LINE_AA, 0);
+    // }
     cv.imshow('canvas', cv_src);
   } else {
     ctx.putImageData(imgData, 0, 0);    
