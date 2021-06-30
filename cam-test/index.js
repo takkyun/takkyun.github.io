@@ -85,12 +85,10 @@ function draw() {
     // for (let i = 0; i < 4; i++) {
     //   cv.line(cv_src, vertices[i], vertices[(i + 1) % 4], red, 2, cv.LINE_AA, 0);
     // }
-    cv.imshow('canvas', cv_src);
-    ctx.putImageData(imageData, 0, 0);    
-  } else {
-    ctx.putImageData(imageData, 0, 0);    
+    cv.imshow('canvasOutput', cv_src);
   }
 
+  ctx.putImageData(imageData, 0, 0);    
   requestAnimationFrame(draw);
 }
 
