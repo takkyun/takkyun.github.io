@@ -86,8 +86,9 @@ function draw() {
     //   cv.line(cv_src, vertices[i], vertices[(i + 1) % 4], red, 2, cv.LINE_AA, 0);
     // }
     cv.imshow('canvas', cv_src);
+    ctx.putImageData(imageData, 0, 0);    
   } else {
-    ctx.putImageData(imgData, 0, 0);    
+    ctx.putImageData(imageData, 0, 0);    
   }
 
   requestAnimationFrame(draw);
