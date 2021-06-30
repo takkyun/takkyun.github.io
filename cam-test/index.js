@@ -50,7 +50,6 @@ function draw() {
   imageData = ctx.getImageData(0, 0, cw, ch);
 
   if (isReady) {
-    const dst = cv.Mat.zeros(cw, ch, cv.CV_8UC3);
     const cv_src = new cv.matFromImageData(imageData);
     // const imgray = new cv.Mat(),thresh = new cv.Mat();
     // cv.cvtColor(cv_src, imgray, cv.COLOR_BGR2GRAY)
@@ -86,6 +85,7 @@ function draw() {
     //   cv.line(cv_src, vertices[i], vertices[(i + 1) % 4], red, 2, cv.LINE_AA, 0);
     // }
     cv.imshow('canvasOutput', cv_src);
+    cv_src.delete();
   }
 
   ctx.putImageData(imageData, 0, 0);    
