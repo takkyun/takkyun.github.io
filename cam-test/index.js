@@ -47,3 +47,21 @@ function draw() {
   ctx.putImageData(imgData, 0, 0);
   requestAnimationFrame(draw);
 }
+
+function onOpenCvReady() {
+  document.getElementById('status').innerHTML = 'OpenCV is ready';
+}
+
+function onOpenCvError() {
+  document.getElementById('status').innerHTML = 'Failed to load OpenCV';
+}
+
+(function() {
+  const script = Object.assign(document.createElement(`script`), {
+    async: true,
+    src: 'https://docs.opencv.org/master/opencv.js',
+  });
+  script.addEventListener('load', onOpenCvReady);
+  script.addEventListener('error', onOpenCvError);
+  document.head.appendChild(script);  
+})();
