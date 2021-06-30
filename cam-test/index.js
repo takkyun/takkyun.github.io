@@ -1,22 +1,20 @@
-const config = {
-  audio: false,
-  video: {
-    facingMode: {
-      exact: "environment"
-    }
-  }
-};
+const targets = ['environment','user']
 const video  = document.getElementById("video");
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
-const promise = navigator.mediaDevices.getUserMedia(config);
-
+let targetIndex = 0;
 let imageData;
 let isReady = false;
 
-promise
+function startMedia(index) {
+  navigator.mediaDevices
+  .getUserMedia({
+    audio: false,
+    video: { facingMode: { exact: targets[index] } }
+  })
   .then(successCallback)
   .catch(errorCallback);
+}
 
 function successCallback(stream) {
   video.srcObject = stream;
@@ -24,7 +22,12 @@ function successCallback(stream) {
 };
 
 function errorCallback(err) {
-  alert(err);
+  if (targetIndex < targets.length - 1) {
+    targetIndex += 1;
+    startMedia(targetIndex);
+  } else {
+    alert(err);
+  }
 };
 
 function getLargestContour(contours) {
@@ -75,6 +78,7 @@ function onOpenCvError() {
 }
 
 (function() {
+  startMedia(targetIndex);
   document.getElementById('status').innerHTML = 'Preparing...';
   const script = Object.assign(document.createElement(`script`), {
     async: true,
