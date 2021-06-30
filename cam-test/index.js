@@ -7,13 +7,18 @@ let imageData;
 let isReady = false;
 
 function startMedia(index) {
+  if (window.stream) {
+    window.stream.getTracks().forEach(function (track) {
+      track.stop();
+    });
+  }
   navigator.mediaDevices
-  .getUserMedia({
-    audio: false,
-    video: { facingMode: { exact: targets[index] } }
-  })
-  .then(successCallback)
-  .catch(errorCallback);
+    .getUserMedia({
+      audio: false,
+      video: { facingMode: { exact: targets[index] } }
+    })
+    .then(successCallback)
+    .catch(errorCallback);
 }
 
 function successCallback(stream) {
@@ -23,8 +28,10 @@ function successCallback(stream) {
 
 function errorCallback(err) {
   if (targetIndex < targets.length - 1) {
-    targetIndex += 1;
-    startMedia(targetIndex);
+    setTimeout(() => {
+      targetIndex += 1;
+      startMedia(targetIndex);
+    }, 100);
   } else {
     alert(err);
   }
