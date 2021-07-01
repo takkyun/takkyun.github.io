@@ -1,4 +1,4 @@
-const targets = ['environment','user']
+const targets = [{exact: 'environment'}, 'user'];
 const video  = document.getElementById("video");
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
@@ -15,7 +15,7 @@ function startMedia(index) {
   navigator.mediaDevices
     .getUserMedia({
       audio: false,
-      video: { facingMode: { exact: targets[index] } }
+      video: { facingMode: targets[index] }
     })
     .then(successCallback)
     .catch(errorCallback);
